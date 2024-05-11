@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="891.0" style="-fx-background-color: #fffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coronatime.Controller">
+   <children>
+      <AnchorPane layoutX="100.0" layoutY="93.0" prefHeight="498.0" prefWidth="768.0" style="-fx-background-color: #c24654; -fx-background-radius: 10;">
+         <children>
+            <TextField fx:id="enteredC" layoutX="314.0" layoutY="280.0" />
+            <Text fx:id="input" fill="WHITE" layoutX="331.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Country">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="searchA" layoutX="678.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleAllButton" text="Search all" />
+            <Button fx:id="search" layoutX="338.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleButtonCick" prefHeight="52.0" prefWidth="98.0" styleClass="button2" stylesheets="@fullpackstyling.css" text="Search" textFill="WHITE" />
+            <Text fx:id="countryT" fill="WHITE" layoutX="195.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Worldwide" textAlignment="CENTER" wrappingWidth="379.0" x="3.0" y="-24.0">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="147.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmed" wrappingWidth="141.763671875" x="3.0" y="-24.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="314.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recovered" textAlignment="CENTER" wrappingWidth="141.763671875" x="3.0" y="-24.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="549.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Death" wrappingWidth="141.763671875" x="3.0" y="-24.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="confirmedT" fill="WHITE" layoutX="112.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="171.4970703125" x="3.0" y="-24.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="recoveredT" fill="WHITE" layoutX="310.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="149.0" x="3.0" y="-24.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="deathT" fill="WHITE" layoutX="494.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="171.4970703125" x="3.0" y="-24.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="77.0" prefHeight="80.0" prefWidth="814.0" style="-fx-background-color: #c24654;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" textAlignment="CENTER">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/world.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox prefHeight="605.0" prefWidth="80.0" style="-fx-background-color: #c24654;" stylesheets="@fullpackstyling.css">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <children>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#allCasesButton" prefHeight="76.0" prefWidth="80.0" styleClass="button3" stylesheets="@fullpackstyling.css" text="All Cases" textFill="#ffacac">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/syringe.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="80.0" stylesheets="@fullpackstyling.css" text="Search" textFill="#ffacac">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="button3" />
+                  <String fx:value="selected" />
+               </styleClass>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="86.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="80.0" styleClass="button3" stylesheets="@fullpackstyling.css" text="Georgia" textFill="#ffacac">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/georgia.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="162.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="80.0" styleClass="button3" stylesheets="@fullpackstyling.css" text="New York" textFill="#ffacac">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/newYork.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="308.0" prefWidth="80.0">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="68.0" prefWidth="80.0" styleClass="button3" stylesheets="@fullpackstyling.css" text="About" textFill="#ffacac">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/about.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
